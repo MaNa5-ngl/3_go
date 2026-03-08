@@ -1,0 +1,18 @@
+import pygame
+import sys
+
+pygame.init()
+
+screen = pygame.display.set_mode((380, 380))
+pygame.display.set_caption("Circle Example")
+
+while True:
+    events = pygame.event.get()
+    for event in events:
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+
+    screen.fill("lightblue")
+    pygame.draw.circle(screen, "red", (160, 180), 100)
+    pygame.display.update()
